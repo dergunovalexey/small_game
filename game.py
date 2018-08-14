@@ -41,8 +41,8 @@ class BasicGame():
         self.army_first_player = []
         self.army_second_player = []
 
-    def add_unit(self, player, unit):
-        if not player:
+    def add_unit(self, flag_second, unit):
+        if not flag_second:
             if self.balance_first_player - self.cost_unit_map[unit] >= 0:
                 self.balance_first_player -= self.cost_unit_map[unit]
                 self.army_first_player.append(unit)
